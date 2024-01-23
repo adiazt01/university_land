@@ -1,0 +1,20 @@
+// 2. Definir tus propias variables aquí
+$primary: #025373;
+$secondary: #f2a649;
+$tertiary: #f2f2f2;
+
+// 1. Importar las funciones de Bootstrap (si estás usando Bootstrap 5)
+@import "~/bootstrap/scss/functions";
+
+// 3. Importar las variables y mixins de Bootstrap
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
+@import "~bootstrap/scss/bootstrap";
+
+// 4. Importar los componentes de Bootstrap que necesitas
+@import "~bootstrap/scss/reboot";
+@import "~bootstrap/scss/type";
+@import "~bootstrap/scss/images";
+
+// 5. Importar tus propios estilos
+@import "./header.css";
