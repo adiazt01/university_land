@@ -24,33 +24,38 @@
   </head>
   <body>
     <!-- Navbar -->
-    <div class="d-flex bg-primary sticky-top flex-column">
+    <div class="d-flex fixed-top flex-column">
+      <!-- Top header -->
       <nav
-        class="d-flex flex-row align-items-center top-header justify-content-between px-3"
+        class="d-flex bg-primary flex-row align-items-center top-header justify-content-between px-3"
       >
         <ul class="d-flex my-auto gap-4 flex-row list-unstyled">
           <li>
             <a
-              class="link-light text-decoration-none"
+              href="tel:+15555555555"
+              class="link-light fs-5 text-decoration-none"
+            >
+              <span class="bi bi-telephone-fill" alt="Phone"></span>
+              <span class="d-none d-sm-inline">+1-555-555-5555</span>
+            </a>
+          </li>
+          <li>
+            <a
+              class="link-light fs-5 text-decoration-none"
               href="mailto:example@example.com"
             >
               <span class="bi bi-envelope-fill" alt="Email"></span>
               <span class="d-none d-sm-inline">example@example.com</span>
             </a>
           </li>
-          <li>
-            <a href="tel:+15555555555" class="link-light text-decoration-none">
-              <span class="bi bi-telephone-fill" alt="Phone"></span>
-              <span class="d-none d-sm-inline">+1-555-555-5555</span>
-            </a>
-          </li>
         </ul>
+
         <ul class="d-flex my-auto gap-4 flex-row list-unstyled">
           <li>
             <a
               href="https://www.facebook.com/"
               target="_blank"
-              class="link-light text-decoration-none"
+              class="link-light fs-5 text-decoration-none"
             >
               <span class="bi bi-facebook" alt="Facebook"></span>
             </a>
@@ -59,7 +64,7 @@
             <a
               href="https://www.twitter.com/"
               target="_blank"
-              class="link-light text-decoration-none"
+              class="link-light fs-5 text-decoration-none"
             >
               <span class="bi bi-twitter" alt="Twitter"></span>
             </a>
@@ -68,76 +73,107 @@
             <a
               href="https://www.instagram.com/"
               target="_blank"
-              class="link-light text-decoration-none"
+              class="link-light fs-5 text-decoration-none"
             >
               <span class="bi bi-instagram" alt="Instagram"></span>
             </a>
           </li>
         </ul>
       </nav>
-      <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">Navbar</a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a
-                  class="nav-link dropdown-toggle"
-                  href="#"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  Dropdown
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
-                  <li><hr class="dropdown-divider" /></li>
-                  <li>
-                    <a class="dropdown-item" href="#">Something else here</a>
-                  </li>
-                </ul>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-              </li>
-            </ul>
-            <form class="d-flex" role="search">
-              <input
-                class="form-control me-2"
-                type="search"
-                placeholder="Search"
-                aria-label="Search"
-              />
-              <button class="btn btn-outline-success" type="submit">
-                Search
-              </button>
-            </form>
-          </div>
+
+      <!-- Navbar -->
+      <nav class="navbar navbar-expand-lg bg-transparent px-4">
+        <!-- Logo Navbar -->
+        <a class="navbar-brand" href="#">
+          <img
+            src="./images/logo.png"
+            alt="University logo"
+            width="75"
+            height="50"
+          />
+        </a>
+
+        <!-- Button responsive -->
+        <button
+          class="navbar-toggler border-0 bg-transparent"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <i class="bi bi-list"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Dropdown
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+            </li>
+          </ul>
+          <form class="d-flex" role="search">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-success" type="submit">
+              Search
+            </button>
+          </form>
         </div>
       </nav>
     </div>
 
-    <main class="container vh-100 d-flex flex-col">
-      <div class="col-12">Hola mundo</div>
+    <!-- Hero -->
+    <main
+      class="min-vh-100 d-flex justify-content-center position-relative flex-column overflow-hidden"
+    >
+      <video
+        class="position-absolute overflow-hidden object-fit-cover z-0 w-100 h-100"
+        autoplay
+        muted
+        loop
+      >
+        <source src="videos/hero-video.mp4" type="video/mp4" />
+      </video>
+
+      <div class="row px-4 z-1">
+        <div class="col-12 col-md-6">
+          <!-- Video hero -->
+          <h1 class="display-1 text-light fw-bold">Welcome a the university</h1>
+          <p class="lead text-light">
+            We are an online platform to make learning
+          </p>
+          <button class="btn btn-secondary border-2 border-light text-light btn-lg rounded-4 fs-5 px-5">Learn more</button>
+        </div>
+      </div>
     </main>
 
     <script
