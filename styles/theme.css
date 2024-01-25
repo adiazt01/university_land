@@ -6,6 +6,7 @@
  */
 @import "./header.css";
 @import "./shadows.css";
+@import "./container.css";
 :root,
 [data-bs-theme=light] {
   --bs-blue: #0d6efd;
@@ -12526,13 +12527,25 @@ progress {
   color: var(--bs-secondary-color);
 }
 
-.video-container::after {
+.circle {
+  border-radius: 50%;
+  overflow: hidden;
+  width: 8rem;
+  height: 8rem;
+}
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+.filter-container::after {
   content: "";
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(1, 71, 98, 0.5);
+  background: rgba(1, 71, 98, 0.7);
   z-index: 0;
 }/*# sourceMappingURL=theme.css.map */
