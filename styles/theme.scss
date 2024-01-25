@@ -1,5 +1,5 @@
 // 2. Definir tus propias variables aquí
-$primary: #025373;
+$primary: #014762;
 $secondary: #f2a649;
 $tertiary: #f2f2f2;
 
@@ -18,6 +18,7 @@ $tertiary: #f2f2f2;
 
 // 5. Importar tus propios estilos
 @import "./header.css";
+@import "./shadows.css";
 
 .video-container::after {
     content: "";
