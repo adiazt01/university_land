@@ -12534,6 +12534,34 @@ progress {
   height: 8rem;
 }
 
+.card-grid {
+  height: 20vh;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease-in-out;
+  position: relative;
+}
+
+@media (min-width: 768px) {
+  .card-grid--down--large, .card-grid--medium {
+    width: auto;
+    height: 25vh;
+  }
+}
+
+.card-grid:hover {
+  transform: translateY(-0.5rem);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+}
+
+@media (min-width: 768px) {
+  .card-grid--vertical-large {
+    height: 51.7vh;
+    max-width: auto;
+  }
+}
+
 .img-fluid {
   max-width: 100%;
   height: auto;

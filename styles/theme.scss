@@ -28,6 +28,43 @@ $tertiary: #f2f2f2;
   height: 8rem;
 }
 
+.card-grid {
+  height: 20vh;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease-in-out;
+  position: relative;
+}
+
+%card-grid-size {
+  @include media-breakpoint-up(md) {
+    width: auto;
+    height: 25vh;
+  }
+}
+
+.card-grid:hover {
+  transform: translateY(-0.5rem);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+}
+
+.card-grid--vertical-large {
+  @include media-breakpoint-up(md) {
+    height: 51.7vh;
+    max-width: auto;
+  }
+}
+
+.card-grid--medium {
+  @extend %card-grid-size;
+}
+
+.card-grid--down--large {
+  @extend %card-grid-size;
+  
+}
+
 .img-fluid {
   max-width: 100%;
   height: auto;
