@@ -3,9 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+    <link rel="icon" type="image/x-icon" href="logo.png" />
     <title>University of techologies</title>
-
     <!-- Bootstrap and icons -->
   </head>
   <body style="display: none">
@@ -139,9 +138,9 @@
       </nav>
     </div>
 
-    <!-- Hero -->
+    <!-- Header -->
     <main
-      class="min-vh-100 d-flex justify-content-center position-relative flex-column overflow-hidden filter-container"
+      class="min-vh-100 d-flex justify-content-center position-relative flex-column overflow-hidden py-5 py-lg-0 filter-container object-fit-cover"
     >
       <video
         class="position-absolute overflow-hidden object-fit-cover z-0 w-100 h-100"
@@ -153,27 +152,95 @@
         <source src="videos/hero-video.mp4" type="video/mp4" />
       </video>
 
-      <div class="row px-4 z-1">
-        <div class="col-12 col-md-6">
-          <!-- Video hero -->
-          <div class="row justify-content-center">
-            <h1 class="display-1 text-light fw-medium text-center">
+      <div
+        class="row gy-lg-0 mt-md-0 gy-5 px-lg-5 px-0 mx-5 z-1 mt-lg-0"
+        style="margin-top: 25vh"
+      >
+        <div class="col-12 d-flex flex-column justify-content-center col-md-6">
+          <div class="row">
+            <h1
+              class="display-6 text-md-start text-center text-light fw-medium"
+            >
               Welcome a the university
             </h1>
             <div
-              class="border-secondary border-2 bg-secondary py-1 mt-2 w-75 rounded"
+              class="border-secondary border-2 bg-secondary py-1 mt-2 mx-auto mx-md-3 w-75 rounded"
             ></div>
-            <p class="lead mt-4 text-center text-light fs-4">
-              We are an online platform to make learning
+            <p
+              class="display-6 px-md-3 fw-bolder mt-4 text-center text-md-start text-light"
+            >
+              We are an online <br class="d-lg-block d-none" />
+              platform to make learning
             </p>
           </div>
-          <div class="row mt-4 justify-content-center">
-            <div class="col-8 col-md-8">
+          <div class="row mt-5 justify-content-center justify-content-lg-start">
+            <div class="col-8 col-lg-5">
               <button
-                class="btn btn-secondary border-2 border-light text-light btn-lg rounded-4 fs-5 py-2 w-100"
+                class="btn btn-secondary border-2 border-light text-light btn-lg rounded-5 fs-5 py-2 w-100"
               >
-                Learn more
+                Get Now
               </button>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 px-lg-5 col-md-6 mt-md-0" style="margin-top: 30vh">
+          <div class="card card-shadow rounded-4 border-0 overflow-hidden">
+            <header
+              class="card-header rounded-1 bg-primary border-bottom border-5 border-secondary text-light"
+            >
+              <h2 class="text-center pt-3">Register Now!</h2>
+            </header>
+            <div class="card-body px-4 mt-3">
+              <form>
+                <div class="mb-4">
+                  <input
+                    type="text"
+                    class="form-control rounded-4 border-0 bg-dark-subtle"
+                    placeholder="Name"
+                  />
+                </div>
+                <div class="row">
+                  <div class="col-md-6 mb-4">
+                    <input
+                      type="email"
+                      class="form-control rounded-4 border-0 bg-dark-subtle"
+                      placeholder="Email"
+                    />
+                  </div>
+                  <div class="col-md-6 mb-4">
+                    <input
+                      type="tel"
+                      class="form-control rounded-4 border-0 bg-dark-subtle"
+                      placeholder="Phone"
+                    />
+                  </div>
+                </div>
+                <div class="mb-4">
+                  <input
+                    type="text"
+                    class="form-control rounded-4 border-0 bg-dark-subtle"
+                    placeholder="Subject"
+                  />
+                </div>
+                <div class="mb-3">
+                  <textarea
+                    class="form-control rounded-3 border-0 bg-dark-subtle"
+                    rows="3"
+                    placeholder="Message"
+                  ></textarea>
+                </div>
+                <div
+                  class="row mt-4 mb-2 justify-content-lg-start justify-content-center"
+                >
+                  <div class="col-6 col-md-4">
+                    <button
+                      class="btn btn-secondary border-2 border-light text-light btn-lg rounded-5 fs-5 py-1 w-100"
+                    >
+                      Send
+                    </button>
+                  </div>
+                </div>
+              </form>
             </div>
           </div>
         </div>
@@ -181,21 +248,26 @@
     </main>
 
     <!-- Courses section -->
-    <section class="container min-vh-100 mt-5">
+    <section class="container min-vh-100 py-5 mt-5">
       <header class="row justify-content-center">
         <div class="col-12">
-          <h2 class="display-4 fw-medium text-center">Courses</h2>
+          <h2 class="display-4 fw-medium text-center text-md-start display-6">
+            The most popular
+          </h2>
           <div
-            class="border-secondary border-1 bg-secondary py-1 mx-auto mt-2 w-50 rounded"
+            class="border-secondary border-1 bg-secondary py-1 mx-auto mx-md-0 mt-2 w-25 rounded"
           ></div>
-          <p class="fs-1 mt-3 fw-medium text-center">
-            We are an online platform to make learning
+          <p class="display-5 mt-3 fw-semibold text-center text-md-start">
+            Know what we offer you
           </p>
         </div>
       </header>
+
       <!-- Card grids with four cards -->
-      <div>
-        <ul class="row row-cols-1 row-cols-md-2 row-cols-lg-4 list-unstyled">
+      <div class="container mt-5">
+        <ul
+          class="row gx-5 row-cols-1 px-5 gap-5 px-md-0 gap-md-0 row-cols-md-2 row-cols-lg-4 list-unstyled"
+        >
           <li class="col">
             <article class="card mx-auto card-shadow">
               <img
@@ -345,9 +417,11 @@
     <!-- Services -->
     <!-- ? En vista Móvil colocar los círculos ordenados en grupos de dos por fila  -->
     <!-- ! Cambiar atributos -->
-    <section class="icons-container position-relative">
+    <section
+      class="icons-container position-relative d-flex align-items-center justify-content-center py-5"
+    >
       <picture
-        class="position absolute overflow-hidden z-0 w-100 h-100 filter-container z-0"
+        class="position-absolute overflow-hidden z-0 w-100 h-100 filter-container z-0"
       >
         <img
           src="./images/background/benefits_background.jpg"
@@ -508,8 +582,20 @@
       </div>
     </section>
 
-    <section class="container min-vh-100">
-      <div class="swiper mySwiper">
+    <section class="container py-5 bg-body-secondary min-vh-100">
+      <header class="row">
+        <h2 class="title text-center text-lg-start">Study careers</h2>
+        <div class="col-11 col-lg-5 m-lg-0 m-auto">
+          <hr
+            class="title-line border m-lg-0 mx-auto border-secondary w-100 border-2 opacity-100 rounded-4"
+          />
+          <p class="text-dark-emphasis mt-1 text-lg-start text-center">
+            Explore the different careers we offer
+          </p>
+        </div>
+      </header>
+
+      <div class="container swiper mySwiper">
         <div class="swiper-wrapper">
           <div class="swiper-slide">
             <!-- Caard with a middle photo profile, in top a background and down his name -->
@@ -624,7 +710,75 @@
         </div>
         <div class="swiper-button-next"></div>
         <div class="swiper-button-prev"></div>
-        <div class="swiper-pagination"></div>
+      </div>
+    </section>
+
+    <section class="min-vh-100 py-5 container d-flex align-items-center">
+      <div class="mx-auto container-testimonials position-relative">
+        <picture
+          class="position-absolute overflow-hidden w-100 h-100 filter-container"
+        >
+          <img
+            src="./images/categorys/architechture.jpg"
+            alt="Services"
+            class="w-100 object-fit-cover h-100"
+          />
+        </picture>
+        <div
+          class="row row-cols-1 row-cols-lg-2 px-lg-5 px-0 container-testimonials-row mx-auto"
+        >
+          <div class="col-12 col-lg-6 z-1">
+            <h2 class="fs-6 text-light px-2 text-center">VIEW TESTIMONIALS</h2>
+            <p class="fs-1 fw-bold px-2 text-light text-center">
+              FOR US IT IS VERY IMPORTANT TO KNOW THE OPINION OF OUR CLIENTS
+            </p>
+          </div>
+          <div class="col-12 col-lg-6">
+            <div class="swiper carousel-testimonials">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <article class="card-testimonial">
+                    <picture class="card-testimonial-img-container">
+                      <img
+                        src="./images/background/graduated_background.jpg"
+                        alt="Background"
+                      />
+                    </picture>
+                    <button
+                      class="card-testimonial-playButton btn btn-primary z-1"
+                    >
+                      <span class="bi bi-play-fill"></span>
+                    </button>
+                    <div class="card-testimonial-body">
+                      <h4
+                        class="fs-3 fst-italic bg-white px-4 py-2 rounded bg-secondary fw-medium"
+                        style="color: rgb(199, 53, 0)"
+                      >
+                        <strong>John Smith</strong>
+                      </h4>
+                    </div>
+                  </article>
+                </div>
+                <div class="swiper-slide">
+                  <article class="card-testimonial">
+                    <picture class="card-testimonial-img-container">
+                      <img
+                        src="./images/background/graduated_background.jpg"
+                        alt="Background"
+                      />
+                    </picture>
+                    <div class="card-testimonial-body">
+                      <h4 class="fs-2 px-2 py-2 bg-secondary fw-medium">
+                        <strong>John Smith</strong>
+                      </h4>
+                    </div>
+                  </article>
+                </div>
+              </div>
+              <div class="swiper-pagination z-2"></div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -633,10 +787,28 @@
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
       crossorigin="anonymous"
     ></script>
-
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
     <script>
+      window.addEventListener("scroll", function () {
+        const topNav = document.querySelector(".top-header");
+        const navbar = document.querySelector(".navbar");
+        const scrollPosition = window.scrollY;
+
+        if (scrollPosition >= window.innerHeight) {
+          // Si el desplazamiento es mayor o igual a la altura de la ventana
+          topNav.classList.remove("bg-primary");
+          topNav.classList.add("bg-white");
+          navbar.classList.remove("bg-transparent");
+          navbar.classList.add("bg-primary");
+        } else {
+          topNav.classList.add("bg-primary");
+          topNav.classList.remove("bg-white");
+          navbar.classList.add("bg-transparent");
+          navbar.classList.remove("bg-primary");
+        }
+      });
+
       const swiper = new Swiper(".mySwiper", {
         spaceBetween: 30,
         pagination: {
@@ -659,6 +831,17 @@
             slidesPerView: 4,
             spaceBetween: 70,
           },
+        },
+      });
+
+      var carouselTestimonials = new Swiper(".carousel-testimonials", {
+        slidesPerView: 1,
+        spaceBetween: 10,
+        speed: 0, // No animation
+        // Enable pagination
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
         },
       });
 

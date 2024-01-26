@@ -8,6 +8,7 @@
 @import "./shadows.css";
 @import "./container.css";
 @import url("https://unpkg.com/swiper/swiper-bundle.min.css");
+@import url("https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@100;300;500;700&family=Varela+Round&display=swap");
 :root,
 [data-bs-theme=light] {
   --bs-blue: #0d6efd;
@@ -12528,6 +12529,34 @@ progress {
   color: var(--bs-secondary-color);
 }
 
+body {
+  font-family: "M PLUS Rounded 1c", sans-serif;
+  font-family: "Varela Round", sans-serif;
+}
+
+h2.display-4::before, .display-4.h2::before {
+  content: "";
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin-bottom: 5px;
+  border-radius: 50%;
+  background: #000;
+}
+@media (max-width: 768px) {
+  h2.display-4::before, .display-4.h2::before {
+    display: none;
+  }
+}
+
+.top-header, .navbar {
+  transition: background-color 0.5s ease;
+}
+
+.bg-body-tertiary {
+  background-color: #6d6d6d;
+}
+
 .circle {
   border-radius: 50%;
   overflow: hidden;
@@ -12566,6 +12595,7 @@ progress {
 
 /* Card tutors */
 .card-tutor {
+  background-color: #ffffff;
   height: 60vh;
   border-radius: 50%;
   overflow: hidden;
@@ -12608,15 +12638,89 @@ progress {
   padding: 1rem;
 }
 
-.swiper {
+/* Cards testimonials */
+.card-testimonial-playButton {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #ffffff;
+  font-size: 3rem;
+  z-index: 1;
+  background-color: rgba(199, 53, 0, 0.5);
+  border: none;
+  border-radius: 50%;
+  padding: 0 10px 0 15px;
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+}
+.card-testimonial-playButton:hover {
+  background-color: rgba(234, 65, 3, 0.8);
+}
+
+.container-testimonials {
+  max-width: 100%;
+  padding: 0px;
+}
+@media (min-width: 992px) {
+  .container-testimonials {
+    max-width: 70vw;
+    min-height: 70vh;
+  }
+}
+
+.container-testimonials-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  margin: 100px 0px;
+}
+
+.card-testimonial {
+  background-color: #ffffff;
+  min-height: 40vh;
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 1rem;
+  position: relative;
+}
+
+.card-testimonial-img-container {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  height: auto;
+  height: 100%;
+  filter: brightness(0.5);
+}
+
+.card-testimonial-body {
+  position: absolute;
+  bottom: -20px;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.carousel-testimonials {
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .swiper-slide {
   text-align: center;
   font-size: 18px;
-  background: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
