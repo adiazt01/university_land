@@ -41,6 +41,10 @@ $tertiary: #6d6d6d;
   background: darken($primary, 10%);
 }
 
+section {
+  scroll-margin: 100px;
+}
+
 body {
   font-family: "M PLUS Rounded 1c", sans-serif;
   font-family: "Varela Round", sans-serif;

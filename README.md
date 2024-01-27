@@ -42,3 +42,7 @@ This is a landing page for a university. It is a project for the technical test 
 ```
 
 5. Open [http://localhost:5173](http://localhost:5173) with your browser to see the result
+
+## 🌌 Build
+
+For the build of the project, only push the changes to the main branch and the deployment will be done automatically.
