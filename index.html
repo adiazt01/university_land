@@ -6,25 +6,9 @@
     <link rel="icon" type="image/x-icon" href="logo.png" />
     <title>University of techologies</title>
     <!-- Bootstrap and icons -->
+    <link rel="stylesheet" href="styles/theme.scss" />
   </head>
-  <body style="display: none">
-    <!-- Script para que se muestre la pagina despues de cargar los estilos -->
-    <script>
-      // ! Colocar el script en un archivo aparte
-      window.addEventListener("load", function () {
-        const link = document.createElement("link");
-        link.rel = "stylesheet";
-        link.href =
-          "https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css";
-        link.integrity =
-          "sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN";
-        link.crossOrigin = "anonymous";
-        document.head.appendChild(link);
-
-        document.body.style.display = "block";
-      });
-    </script>
-
+  <body>
     <!-- Navbar -->
     <div class="d-flex fixed-top flex-column">
       <!-- Top header -->
@@ -98,8 +82,8 @@
             <img
               src="./images/logo.png"
               alt="University logo"
-              width="75"
-              height="50"
+              width="90"
+              height="60"
             />
           </a>
 
@@ -121,15 +105,22 @@
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
               <li class="nav-item">
                 <a class="nav-link link-light fs-5" aria-current="page" href="#"
-                  ><strong>Home</strong></a
+                  >About us</a
                 >
               </li>
               <li class="nav-item">
-                <a class="nav-link fs-5 link-light" href="#">Link</a>
+                <a class="nav-link link-light fs-5" aria-current="page" href="#"
+                  >Courses</a
+                >
               </li>
               <li class="nav-item">
-                <a class="nav-link fs-5 link-light" aria-disabled="true"
-                  >Disabled</a
+                <a class="nav-link link-light fs-5" aria-current="page" href="#"
+                  >Team</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link link-light fs-5" aria-current="page" href="#"
+                  >Contact us</a
                 >
               </li>
             </ul>
@@ -140,7 +131,7 @@
 
     <!-- Header -->
     <main
-      class="min-vh-100 d-flex justify-content-center position-relative flex-column overflow-hidden py-5 py-lg-0 filter-container object-fit-cover"
+      class="min-vh-100 containe d-flex justify-content-center position-relative flex-column overflow-hidden py-5 py-lg-0 filter-container object-fit-cover"
     >
       <video
         class="position-absolute overflow-hidden object-fit-cover z-0 w-100 h-100"
@@ -153,8 +144,8 @@
       </video>
 
       <div
-        class="row gy-lg-0 mt-md-0 gy-5 px-lg-5 px-0 mx-5 z-1 mt-lg-0"
-        style="margin-top: 25vh"
+        class="row gy-lg-0 mt-md-0 gy-5 px-lg-5 px-0 z-1 mx-1 mx-lg-5 mt-lg-0"
+        style="margin-top: 20vh"
       >
         <div class="col-12 d-flex flex-column justify-content-center col-md-6">
           <div class="row">
@@ -232,7 +223,7 @@
                 <div
                   class="row mt-4 mb-2 justify-content-lg-start justify-content-center"
                 >
-                  <div class="col-6 col-md-4">
+                  <div class="col-6 col-md-6">
                     <button
                       class="btn btn-secondary border-2 border-light text-light btn-lg rounded-5 fs-5 py-1 w-100"
                     >
@@ -249,42 +240,42 @@
 
     <!-- Courses section -->
     <section class="container min-vh-100 py-5 mt-5">
-      <header class="row justify-content-center">
+      <header class="row">
         <div class="col-12">
           <h2 class="display-4 fw-medium text-center text-md-start display-6">
             The most popular
           </h2>
           <div
-            class="border-secondary border-1 bg-secondary py-1 mx-auto mx-md-0 mt-2 w-25 rounded"
+            class="border-secondary border-1 bg-secondary py-1 mx-auto mx-md-0 mt-2 w-75 rounded"
+            style="max-width: 400px"
           ></div>
-          <p class="display-5 mt-3 fw-semibold text-center text-md-start">
+          <p
+            class="display-6 text-primary mt-3 fw-semibold text-center text-md-start"
+          >
             Know what we offer you
           </p>
         </div>
       </header>
 
-      <!-- Card grids with four cards -->
       <div class="container mt-5">
         <ul
-          class="row gx-5 row-cols-1 px-5 gap-5 px-md-0 gap-md-0 row-cols-md-2 row-cols-lg-4 list-unstyled"
+          class="row d-flex gx-5 row-cols-1 gap-5 px-md-0 gap-md-0 row-cols-md-2 row-cols-lg-4 list-unstyled"
         >
           <li class="col">
-            <article class="card mx-auto card-shadow">
-              <img
-                src="./images/courses/curso_1.jpg"
-                class="card-img-top"
-                alt="Course 1"
-              />
-              <div class="border-primary border-1 bg-primary py-1 w-100"></div>
-              <div
-                class="border-secondary border-1 bg-secondary py-1 w-100"
-              ></div>
-              <div class="card-body mt-2 text-center">
-                <h3 class="card-title text-primary">
+            <article class="card-courses mx-auto shadow">
+              <picture class="card-courses-img-container">
+                <img
+                  src="./images/courses/curso_1.jpg"
+                  class="w-100 h-100 object-fit-cover"
+                  alt="Course 1"
+                />
+              </picture>
+              <div class="card-courses-body">
+                <h3 class="fs-5 fw-bolder text-center text-primary">
                   Design for the web with adobe photoshop
                 </h3>
                 <button
-                  class="mt-3 btn btn-secondary border-2 border-light text-light btn-lg rounded-5 fs-5 py-2 w-50 text-truncate"
+                  class="mt-3 btn btn-secondary border-2 border-light text-light w-75 mx-auto rounded-5 fs-5 py-2"
                 >
                   Read More
                 </button>
@@ -292,22 +283,20 @@
             </article>
           </li>
           <li class="col">
-            <article class="card mx-auto card-shadow">
-              <img
-                src="./images/courses/curso_2.jpg"
-                class="card-img-top"
-                alt="Course 1"
-              />
-              <div class="border-primary border-1 bg-primary py-1 w-100"></div>
-              <div
-                class="border-secondary border-1 bg-secondary py-1 w-100"
-              ></div>
-              <div class="card-body mt-2 text-center">
-                <h3 class="card-title text-primary">
-                  Design for the web with adobe photoshop
+            <article class="card-courses mx-auto shadow">
+              <picture class="card-courses-img-container">
+                <img
+                  src="./images/courses/curso_2.jpg"
+                  class="w-100 h-100 object-fit-cover"
+                  alt="Course 1"
+                />
+              </picture>
+              <div class="card-courses-body">
+                <h3 class="fs-5 fw-bolder text-center text-primary">
+                  Programming with java
                 </h3>
                 <button
-                  class="mt-3 btn btn-secondary border-2 border-light text-light btn-lg rounded-5 fs-5 py-2 w-50 text-truncate"
+                  class="mt-3 btn btn-secondary border-2 border-light text-light w-75 mx-auto rounded-5 fs-5 py-2"
                 >
                   Read More
                 </button>
@@ -315,22 +304,20 @@
             </article>
           </li>
           <li class="col">
-            <article class="card mx-auto card-shadow">
-              <img
-                src="./images/courses/curso_3.jpg"
-                class="card-img-top"
-                alt="Course 1"
-              />
-              <div class="border-primary border-1 bg-primary py-1 w-100"></div>
-              <div
-                class="border-secondary border-1 bg-secondary py-1 w-100"
-              ></div>
-              <div class="card-body mt-2 text-center">
-                <h3 class="card-title text-primary">
-                  Design for the web with adobe photoshop
+            <article class="card-courses mx-auto shadow">
+              <picture class="card-courses-img-container">
+                <img
+                  src="./images/courses/curso_3.jpg"
+                  class="w-100 h-100 object-fit-cover"
+                  alt="Course 1"
+                />
+              </picture>
+              <div class="card-courses-body">
+                <h3 class="fs-5 fw-bolder text-center text-primary">
+                  Analysis and design of algorithms
                 </h3>
                 <button
-                  class="mt-3 btn btn-secondary border-2 border-light text-light btn-lg rounded-5 fs-5 py-2 w-50 text-truncate"
+                  class="mt-3 btn btn-secondary border-2 border-light text-light w-75 mx-auto rounded-5 fs-5 py-2"
                 >
                   Read More
                 </button>
@@ -338,22 +325,20 @@
             </article>
           </li>
           <li class="col">
-            <article class="card mx-auto card-shadow">
-              <img
-                src="./images/courses/curso_4.jpg"
-                class="card-img-top"
-                alt="Course 1"
-              />
-              <div class="border-primary border-1 bg-primary py-1 w-100"></div>
-              <div
-                class="border-secondary border-1 bg-secondary py-1 w-100"
-              ></div>
-              <div class="card-body mt-2 text-center">
-                <h3 class="card-title text-primary">
-                  Design for the web with adobe photoshop
+            <article class="card-courses mx-auto shadow">
+              <picture class="card-courses-img-container">
+                <img
+                  src="./images/courses/curso_4.jpg"
+                  class="w-100 h-100 object-fit-cover"
+                  alt="Course 1"
+                />
+              </picture>
+              <div class="card-courses-body">
+                <h3 class="fs-5 fw-bolder text-center text-primary">
+                  Pattern design with adobe illustrator
                 </h3>
                 <button
-                  class="mt-3 btn btn-secondary border-2 border-light text-light btn-lg rounded-5 fs-5 py-2 w-50 text-truncate"
+                  class="mt-3 btn btn-secondary border-2 border-light text-light w-75 mx-auto rounded-5 fs-5 py-2"
                 >
                   Read More
                 </button>
@@ -364,9 +349,6 @@
       </div>
     </section>
 
-    <!-- About us -->
-    <!-- ? En Vista Móvil la organización del contenido debe ser primero el Texto, luego la Imagen y posteriormente el botón -->
-
     <!-- Courses section -->
     <section
       class="min-vh-100 bg-primary py-5 mt-5 d-flex justify-content-center align-items-center"
@@ -376,36 +358,48 @@
           <div
             class="col-12 col-md-6 order-1 d-flex flex-column justify-content-center"
           >
-            <h2 class="display-3 fw-medium text-light">About us</h2>
+            <h2
+              class="display-4 text-light fw-medium text-center text-md-start display-6"
+            >
+              The most popular
+            </h2>
             <div
-              class="border-secondary border-1 bg-secondary py-1 mx-auto mt-2 w-50 rounded"
+              class="border-secondary border-1 bg-secondary py-1 mx-auto mx-md-0 mt-2 w-75 rounded"
+              style="max-width: 400px"
             ></div>
-            <p class="fs-1 mt-3 fw-medium text-light">
-              We are an online platform to make learning
+            <p
+              class="display-6 text-light mt-3 fw-semibold text-center text-md-start"
+            >
+              Kno everything we do for you
             </p>
-            <p class="fs-5 mt-3 fw-normal text-light">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
-              voluptatum, quibusdam, quia, quae voluptates voluptatem quod
-              voluptatibus quos doloribus quas voluptate.
+            <p class="text-light mt-5 fs-3 text-md-start text-center">
+              The university is a physical plcace, building, laboratories,
+              libraries... where students and teachers meets. The university is
+              also a human-social system, that is, a set of elements that are
+              related and interact with each other.
             </p>
             <div class="d-lg-block d-none">
               <button
-                class="btn btn-secondary border-2 border-light text-light btn-lg rounded-5 fs-5 py-2 w-50 text-truncate mx-auto d-block"
+                class="btn btn-secondary border-2 border-light text-light btn-lg rounded-5 fs-5 py-2 w-50 text-truncate mt-5 d-block"
               >
                 Read More
               </button>
             </div>
           </div>
-          <div class="col-12 col-md-6 mt-3 mt-md-0 order-2">
-            <img
-              src="./images/about_us.jpg"
-              alt="About us"
-              class="img-fluid rounded mx-auto d-block"
-            />
+          <div class="col-12 px-5 col-md-6 mt-lg-3 mt-md-0 order-2">
+            <picture
+              class="rounded px-lg-0 overflow-hidden mt-5 mx-auto d-block"
+            >
+              <img
+                src="./images/about_us.jpg"
+                alt="About us"
+                class="img-fluid"
+              />
+            </picture>
           </div>
           <div class="d-lg-none col-md-6 mt-5 mb-5 col-12 order-3">
             <button
-              class="btn btn-secondary border-2 border-light text-light btn-lg rounded-5 fs-5 py-2 w-100 w-md-50 text-truncate mx-auto d-block"
+              class="btn btn-secondary border-2 border-light text-light btn-lg rounded-5 fs-5 py-2 w-50 text-truncate mx-auto d-block"
             >
               Read More
             </button>
@@ -415,8 +409,6 @@
     </section>
 
     <!-- Services -->
-    <!-- ? En vista Móvil colocar los círculos ordenados en grupos de dos por fila  -->
-    <!-- ! Cambiar atributos -->
     <section
       class="icons-container position-relative d-flex align-items-center justify-content-center py-5"
     >
@@ -442,9 +434,9 @@
                   class="img-fluid"
                 />
               </div>
-              <div class="text-center fs-2 fw-bold text-light mt-2">
-                Exellent content
-              </div>
+              <p class="text-center fs-2 fw-bold text-light mt-2">
+                Excellent content
+              </p>
             </div>
           </article>
           <article class="col card border-0 bg-transparent">
@@ -453,14 +445,14 @@
                 class="circle bg-white mx-auto d-flex justify-content-center align-items-center p-4"
               >
                 <img
-                  src="./images/benefits/icon_1.png"
+                  src="./images/benefits/icon_2.png"
                   alt="Icon 1"
                   class="img-fluid"
                 />
               </div>
-              <div class="text-center fs-2 fw-bold text-light mt-2">
-                Exellent content
-              </div>
+              <p class="text-center fs-2 fw-bold text-light mt-2">
+                Excellent Instructors
+              </p>
             </div>
           </article>
           <article class="col card border-0 bg-transparent">
@@ -469,14 +461,14 @@
                 class="circle bg-white mx-auto d-flex justify-content-center align-items-center p-4"
               >
                 <img
-                  src="./images/benefits/icon_1.png"
+                  src="./images/benefits/icon_3.png"
                   alt="Icon 1"
                   class="img-fluid"
                 />
               </div>
-              <div class="text-center fs-2 fw-bold text-light mt-2">
-                Exellent content
-              </div>
+              <p class="text-center fs-2 fw-bold text-light mt-2">
+                The Best Professionals
+              </p>
             </div>
           </article>
           <article class="col card border-0 bg-transparent">
@@ -485,14 +477,14 @@
                 class="circle bg-white mx-auto d-flex justify-content-center align-items-center p-4"
               >
                 <img
-                  src="./images/benefits/icon_1.png"
+                  src="./images/benefits/icon_4.png"
                   alt="Icon 1"
                   class="img-fluid"
                 />
               </div>
-              <div class="text-center fs-2 fw-bold text-light mt-2">
-                Exellent content
-              </div>
+              <p class="text-center fs-2 fw-bold text-light mt-2">
+                Countless Courses
+              </p>
             </div>
           </article>
         </div>
@@ -502,28 +494,43 @@
     <!-- Study careers -->
     <section class="container mt-5 pb-5">
       <header class="row">
-        <h2 class="title text-center text-lg-start">Study careers</h2>
-        <div class="col-11 col-lg-5 m-lg-0 m-auto">
-          <hr
-            class="title-line border m-lg-0 mx-auto border-secondary w-100 border-2 opacity-100 rounded-4"
-          />
-          <p class="text-dark-emphasis mt-1 text-lg-start text-center">
-            Explore the different careers we offer
-          </p>
-        </div>
+        <h2 class="display-4 fw-medium text-center text-md-start display-6">
+          The most popular
+        </h2>
+        <div
+          class="border-secondary border-1 bg-secondary py-1 mx-auto mx-md-0 mt-2 w-75 rounded"
+          style="max-width: 400px"
+        ></div>
+        <p
+          class="display-6 text-primary mt-3 fw-semibold text-center text-md-start"
+        >
+          Know what we offer you
+        </p>
       </header>
-      <!-- Card grids -->
 
       <div
-        class="row gap-5 gap-md-0 row-cols-1 mx-0 px-5 mx-md-5 row-cols-md-3"
+        class="row mt-5 gap-5 gap-md-0 row-cols-1 mx-0 mx-md-5 row-cols-md-3"
       >
         <div class="col">
           <article class="card-grid card-grid--vertical-large">
-            <img
-              src="./images/categorys/administration.jpg"
-              class="position-absolute w-100 h-100 object-fit-cover"
-              alt="Course 1"
-            />
+            <picture class="filter-container w-100 h-100 position-absolute">
+
+              <img
+                src="./images/categorys/administration.jpg"
+                class="position-absolute w-100 h-100  object-fit-cover"
+                alt="Course 1"
+                />
+            </picture>
+            <div class="card-grid-body mb-4 z-1">
+              <h3 class="fs-3 fw-bolder text-center text-light">
+                Administration
+              </h3>
+              <button
+                class="mt-3 btn btn-secondary border-2 border-light text-light w-50 rounded-5 fs-5 py-2"
+              >
+                Read More
+              </button>
+            </div>
           </article>
         </div>
         <div class="col">
@@ -559,7 +566,7 @@
         </div>
       </div>
       <div
-        class="row gap-5 gap-md-0 mt-4 row-cols-1 px-5 mx-md-5 mx-0 row-cols-md-2"
+        class="row gap-5 gap-md-0 mt-4 row-cols-1 mx-md-5 mx-0 row-cols-md-2"
       >
         <div class="col-md-8">
           <article class="card-grid card-grid--down--large">
@@ -788,24 +795,39 @@
       crossorigin="anonymous"
     ></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-
     <script>
       window.addEventListener("scroll", function () {
         const topNav = document.querySelector(".top-header");
         const navbar = document.querySelector(".navbar");
+        const topNavLinks = document.querySelectorAll(".top-header a");
+        const navbarLinks = document.querySelectorAll(".navbar a");
         const scrollPosition = window.scrollY;
 
         if (scrollPosition >= window.innerHeight) {
-          // Si el desplazamiento es mayor o igual a la altura de la ventana
           topNav.classList.remove("bg-primary");
           topNav.classList.add("bg-white");
-          navbar.classList.remove("bg-transparent");
-          navbar.classList.add("bg-primary");
+          navbar.classList.remove("bg-transparent", "bg-white");
+          navbar.classList.add("bg-primary", "shadow");
+
+          topNavLinks.forEach((link) => {
+            link.classList.remove("link-light");
+            link.classList.add("link-primary");
+          });
+
+          navbarLinks.forEach((link) => {
+            link.classList.remove("link-dark");
+            link.classList.add("link-light");
+          });
         } else {
           topNav.classList.add("bg-primary");
           topNav.classList.remove("bg-white");
-          navbar.classList.add("bg-transparent");
-          navbar.classList.remove("bg-primary");
+          navbar.classList.add("bg-transparent", "bg-white");
+          navbar.classList.remove("bg-primary", "shadow");
+
+          topNavLinks.forEach((link) => {
+            link.classList.add("link-light");
+            link.classList.remove("link-primary");
+          });
         }
       });
 
@@ -843,20 +865,6 @@
           el: ".swiper-pagination",
           clickable: true,
         },
-      });
-
-      window.addEventListener("load", function () {
-        const linkBoostrap = document.createElement("link");
-        linkBoostrap.rel = "stylesheet";
-        linkBoostrap.href =
-          "https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css";
-        document.head.appendChild(linkBoostrap);
-
-        // ! Colocar el script en un archivo aparte
-        const linkCss = document.createElement("link");
-        linkCss.rel = "stylesheet";
-        linkCss.href = "./styles/theme.css";
-        document.head.appendChild(linkCss);
       });
     </script>
   </body>

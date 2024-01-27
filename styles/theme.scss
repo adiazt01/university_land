@@ -3,18 +3,15 @@ $primary: #014762;
 $secondary: #f2a649;
 $tertiary: #6d6d6d;
 
-// 1. Importar las funciones de Bootstrap (si estás usando Bootstrap 5)
-@import "~/bootstrap/scss/functions";
+// iconos
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
 
-// 3. Importar las variables y mixins de Bootstrap
-@import "~bootstrap/scss/variables";
-@import "~bootstrap/scss/mixins";
-@import "~bootstrap/scss/bootstrap";
-
-// 4. Importar los componentes de Bootstrap que necesitas
-@import "~bootstrap/scss/reboot";
-@import "~bootstrap/scss/type";
-@import "~bootstrap/scss/images";
+@import "../node_modules/bootstrap/scss/functions";
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/bootstrap";
+@import "../node_modules/bootstrap/scss/reboot";
+@import "../node_modules/bootstrap/scss/type";
+@import "../node_modules/bootstrap/scss/images";
 
 // 5. Importar tus propios estilos
 @import "./header.css";
@@ -22,33 +19,55 @@ $tertiary: #6d6d6d;
 @import "./container.css";
 
 @import url("https://unpkg.com/swiper/swiper-bundle.min.css");
-@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@100;300;500;700&family=Varela+Round&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@100;300;500;700&family=Varela+Round&display=swap");
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+  // Añade bordes redondeados al track
+}
+
+::-webkit-scrollbar-thumb {
+  background: $primary;
+  border-radius: 10px;
+  transition: background 0.3s ease-in-out;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: darken($primary, 10%);
+}
 
 body {
-  font-family: 'M PLUS Rounded 1c', sans-serif;
-  font-family: 'Varela Round', sans-serif;
+  font-family: "M PLUS Rounded 1c", sans-serif;
+  font-family: "Varela Round", sans-serif;
 }
 
 h2.display-4::before {
   content: "";
   display: inline-block;
   width: 10px;
-  height: 10px; 
+  height: 10px;
   margin-bottom: 5px;
   border-radius: 50%;
-  background: #000;
+  background: $secondary;
 
   @media (max-width: 768px) {
     display: none;
   }
 }
 
-.top-header, .navbar {
-  transition: background-color 0.5s ease;
-}
-
+/* Theme boostrap */
 .bg-body-tertiary {
   background-color: $tertiary;
+}
+
+/* Navbar */
+.top-header,
+.navbar {
+  transition: background-color 0.5s ease;
 }
 
 .circle {
@@ -58,15 +77,73 @@ h2.display-4::before {
   height: 8rem;
 }
 
+/* courses section */
+.card-courses {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 450px;
+  max-width: 350px;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.card-courses-img-container {
+  flex: 2.5;
+  overflow: hidden;
+  position: relative;
+}
+
+.card-courses-body {
+  flex: 1;
+  padding: 2rem 1.5rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -1px;
+    left: 0;
+    right: 0;
+    height: 10px;
+    background: $primary;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 9px;
+    left: 0;
+    right: 0;
+    height: 10px;
+    background: $secondary;
+  }
+}
+
 /* Card grid */
 
 .card-grid {
-  height: 20vh;
+  display: flex;
+  justify-content: end;
+  align-items: start;
+  flex-direction: column-reverse;
+  height: 40vh;
   border-radius: 1rem;
   overflow: hidden;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
   transition: all 0.3s ease-in-out;
   position: relative;
+}
+
+.card-grid-body {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: start;
 }
 
 %card-grid-size {
@@ -163,12 +240,7 @@ h2.display-4::before {
   transition: background-color 0.3s ease;
 
   &:hover {
-    background-color: rgba(
-      234,
-      65,
-      3,
-      0.8
-    ); // Fondo más oscuro al pasar el ratón
+    background-color: rgba(234, 65, 3, 0.8);
   }
 }
 
@@ -253,6 +325,6 @@ h2.display-4::before {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba($primary, 0.7);
+  background: rgba($primary, 0.5);
   z-index: 0;
 }
