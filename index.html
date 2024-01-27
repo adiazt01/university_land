@@ -4,7 +4,31 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/x-icon" href="logo.png" />
-    <title>University of techologies</title>
+
+    <!-- SEO -->
+    <title>University of technologies</title>
+    <meta
+      name="description"
+      content="University of technologies is a website that offers you the best courses to learn and improve your skills"
+    />
+    <meta
+      name="keywords"
+      content="University, Technologies, Courses, Learn, Skills, Programming, Design, Architecture, Mathematics, Biology, Administration, Accounting"
+    />
+    <meta name="author" content="Armando Diaz" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="University of technologies" />
+    <meta
+      property="og:description"
+      content="University of technologies is a website that offers you the best courses to learn and improve your skills"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="./images/logo.png" />
+    <meta property="og:site_name" content="University of technologies" />
+    <meta property="og:locale" content="en_US" />
+
     <!-- Bootstrap and icons -->
     <link rel="stylesheet" href="styles/theme.scss" />
   </head>
@@ -15,12 +39,11 @@
       <nav
         class="d-flex bg-primary flex-row align-items-center top-header justify-content-between px-3"
       >
-        <!-- Top header links for mail and phone -->
         <ul class="d-flex my-auto gap-4 flex-row list-unstyled">
           <li>
             <a
               href="tel:+15555555555"
-              class="link-light fs-6 text-decoration-none"
+              class="link-nav-light fs-6 text-decoration-none"
             >
               <span class="bi bi-telephone-fill" alt="Phone"></span>
               <span class="d-none d-sm-inline"
@@ -30,7 +53,7 @@
           </li>
           <li>
             <a
-              class="link-light fs-6 text-decoration-none"
+              class="link-nav-light fs-6 text-decoration-none"
               href="mailto:example@example.com"
             >
               <span class="bi bi-envelope-fill" alt="Email"></span>
@@ -40,13 +63,12 @@
             </a>
           </li>
         </ul>
-        <!-- Top header links for social media -->
         <ul class="d-flex my-auto gap-4 flex-row list-unstyled">
           <li>
             <a
               href="https://www.facebook.com/"
               target="_blank"
-              class="link-light fs-5 text-decoration-none"
+              class="link-nav-light fs-5 text-decoration-none"
             >
               <span class="bi bi-facebook" alt="Facebook"></span>
             </a>
@@ -55,7 +77,7 @@
             <a
               href="https://www.twitter.com/"
               target="_blank"
-              class="link-light fs-5 text-decoration-none"
+              class="link-nav-light fs-5 text-decoration-none"
             >
               <span class="bi bi-twitter" alt="Twitter"></span>
             </a>
@@ -64,7 +86,7 @@
             <a
               href="https://www.instagram.com/"
               target="_blank"
-              class="link-light fs-5 text-decoration-none"
+              class="link-nav-light fs-5 text-decoration-none"
             >
               <span class="bi bi-instagram" alt="Instagram"></span>
             </a>
@@ -77,8 +99,7 @@
         class="navbar justify-content-between navbar-expand-lg bg-transparent px-4"
       >
         <div class="container-fluid">
-          <!-- Logo Navbar -->
-          <a class="navbar-brand" href="#">
+          <a class="navbar-brand" href="#Home">
             <img
               src="./images/logo.png"
               alt="University logo"
@@ -86,10 +107,8 @@
               height="60"
             />
           </a>
-
-          <!-- Button responsive for the links -->
           <button
-            class="navbar-toggler border-0 bg-transparent"
+            class="navbar-toggler border-0"
             type="button"
             data-bs-toggle="collapse"
             data-bs-target="#navbarSupportedContent"
@@ -97,17 +116,15 @@
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            <i class="bi bi-list"></i>
+            <i class="bi bi-list link-nav-light"></i>
           </button>
-
-          <!-- Navbar links -->
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
               <li class="nav-item">
                 <a
                   class="nav-link link-nav-light fs-5"
                   aria-current="page"
-                  href="#"
+                  href="#AboutUs"
                   >About us</a
                 >
               </li>
@@ -115,7 +132,7 @@
                 <a
                   class="nav-link link-nav-light fs-5"
                   aria-current="page"
-                  href="#"
+                  href="#Courses"
                   >Courses</a
                 >
               </li>
@@ -123,7 +140,7 @@
                 <a
                   class="nav-link link-nav-light fs-5"
                   aria-current="page"
-                  href="#"
+                  href="#Team"
                   >Team</a
                 >
               </li>
@@ -131,7 +148,7 @@
                 <a
                   class="nav-link link-nav-light fs-5"
                   aria-current="page"
-                  href="#"
+                  href="#ContactUs"
                   >Contact us</a
                 >
               </li>
@@ -143,6 +160,7 @@
 
     <!-- Header -->
     <main
+      id="Home"
       class="min-vh-100 containe d-flex justify-content-center position-relative flex-column overflow-hidden py-5 py-lg-0 filter-container object-fit-cover"
     >
       <video
@@ -154,7 +172,6 @@
       >
         <source src="videos/hero-video.mp4" type="video/mp4" />
       </video>
-
       <div
         class="row gy-lg-0 mt-md-0 gy-5 px-lg-5 px-0 z-1 mx-1 mx-lg-5 mt-lg-0"
         style="margin-top: 20vh"
@@ -271,7 +288,7 @@
 
       <div class="container mt-5">
         <ul
-          class="row d-flex gx-5 row-cols-1 gap-5 px-md-0 gap-md-0 row-cols-md-2 row-cols-lg-4 list-unstyled"
+          class="row d-flex gy-5 gx-5 row-cols-1 gap-5 px-md-0 gap-md-0 row-cols-md-2 row-cols-lg-4 list-unstyled"
         >
           <li class="col">
             <article class="card-courses mx-auto shadow">
@@ -363,12 +380,13 @@
 
     <!-- About us section -->
     <section
+      id="AboutUs"
       class="min-vh-100 bg-primary py-5 mt-5 d-flex justify-content-center align-items-center"
     >
       <div class="container">
         <div class="row text-center">
           <div
-            class="col-12 col-md-6 order-1 d-flex flex-column justify-content-center"
+            class="col-12 col-lg-6 order-1 d-flex flex-column justify-content-center"
           >
             <h2
               class="display-4 text-light fw-medium text-center text-md-start display-6"
@@ -398,7 +416,7 @@
               </button>
             </div>
           </div>
-          <div class="col-12 px-5 col-md-6 mt-lg-3 mt-md-0 order-2">
+          <div class="col-12 px-5 col-lg-6 mt-lg-3 mt-lg-0 order-2">
             <picture
               class="rounded px-lg-0 overflow-hidden mt-5 mx-auto d-block"
             >
@@ -409,7 +427,7 @@
               />
             </picture>
           </div>
-          <div class="d-lg-none col-md-6 mt-5 mb-5 col-12 order-3">
+          <div class="d-lg-none col-lg-6 mt-5 mb-5 col-12 order-3">
             <button
               class="btn btn-secondary border-2 border-light text-light btn-lg rounded-5 fs-5 py-2 w-50 text-truncate mx-auto d-block"
             >
@@ -434,11 +452,11 @@
         />
       </picture>
       <div class="container z-1">
-        <div class="row mx-auto row-cols-2 row-cols-lg-4 g-4">
+        <div class="row mx-auto row-cols-2 row-cols-lg-4 g-0 g-lg-4">
           <article class="col card border-0 bg-transparent">
             <div class="card-body">
               <div
-                class="circle bg-white mx-auto d-flex justify-content-center align-items-center p-4"
+                class="circle bg-white mx-auto d-flex justify-content-center align-items-center p-3 p-md-4"
               >
                 <img
                   src="./images/benefits/icon_1.png"
@@ -504,7 +522,7 @@
     </section>
 
     <!-- Careers section -->
-    <section class="container py-5 mt-5 pb-5">
+    <section class="container py-5 mt-5 pb-5" id="Courses">
       <header class="row">
         <h2 class="display-4 fw-medium text-center text-md-start display-6">
           The most popular
@@ -523,7 +541,7 @@
       <div
         class="row mt-5 gap-5 gap-md-0 row-cols-1 mx-0 mx-md-5 row-cols-md-3"
       >
-        <div class="col px-5 px-md-2">
+        <div class="col px-md-2">
           <article class="card-grid card-grid--vertical-large">
             <picture class="filter-container w-100 h-100 position-absolute">
               <img
@@ -537,14 +555,14 @@
                 Administration
               </h3>
               <button
-                class="mt-3 btn btn-secondary border-3 border-light text-light mb-4 px-5 px-lg-5 px-md-2 rounded-5 fs-5 py-2 py-md-1"
+                class="mt-3 btn btn-secondary border-3 border-light text-light mb-4 px-lg-5 px-md-2 px-4 rounded-5 fs-6 py-2 py-md-1"
               >
                 Read More
               </button>
             </div>
           </article>
         </div>
-        <div class="col px-5 px-md-2">
+        <div class="col px-md-2">
           <article class="card-grid card-grid--vertical-large">
             <picture class="filter-container w-100 h-100 position-absolute">
               <img
@@ -563,7 +581,7 @@
             </div>
           </article>
         </div>
-        <div class="col px-5 px-md-2">
+        <div class="col px-md-2">
           <div class="row row-cols-1 gap-5 gap-md-3">
             <div class="col">
               <article class="card-grid card-grid--medium">
@@ -613,7 +631,7 @@
       <div
         class="row gap-5 gap-md-0 mt-5 mt-md-3 row-cols-1 mx-md-5 mx-0 row-cols-md-2"
       >
-        <div class="col-md-8 px-5 px-md-2">
+        <div class="col-md-8 px-md-2">
           <article class="card-grid card-grid--down--large">
             <picture class="filter-container w-100 h-100 position-absolute">
               <img
@@ -634,7 +652,7 @@
             </div>
           </article>
         </div>
-        <div class="col-md-4 px-5 px-md-2">
+        <div class="col-md-4 px-md-2">
           <article class="card-grid card-grid--down--large">
             <picture class="filter-container w-100 h-100 position-absolute">
               <img
@@ -656,7 +674,11 @@
       </div>
     </section>
 
-    <section class="container-fluid py-5 bg-body-secondary min-vh-100">
+    <!-- Team section -->
+    <section
+      class="container-fluid py-5 bg-body-secondary min-vh-100"
+      id="Team"
+    >
       <div class="container">
         <header class="row">
           <h2 class="display-4 fw-medium text-center text-md-start display-6">
@@ -673,7 +695,7 @@
           </p>
         </header>
       </div>
-      <div class="container mt-5 swiper carousel-tutors">
+      <div class="container my-5 swiper carousel-tutors">
         <div class="swiper-wrapper">
           <div class="swiper-slide">
             <article class="card-tutor">
@@ -770,7 +792,10 @@
                   alt="Background"
                 />
                 <div class="card-tutor-profile-container">
-                  <img src="./images/tutors/team_3.jpg" alt="Tutor Jimena Soto" />
+                  <img
+                    src="./images/tutors/team_4.jpg"
+                    alt="Tutor Jimena Soto"
+                  />
                 </div>
               </picture>
               <div class="card-tutor-body">
@@ -788,24 +813,75 @@
               </div>
             </article>
           </div>
-          <div class="swiper-slide">Slide 5</div>
-          <div class="swiper-slide">Slide 6</div>
-          <div class="swiper-slide">Slide 7</div>
-          <div class="swiper-slide">Slide 8</div>
-          <div class="swiper-slide">Slide 9</div>
+          <div class="swiper-slide">
+            <article class="card-tutor">
+              <picture class="card-tutor-img-container">
+                <img
+                  src="./images/background/graduated_background.jpg"
+                  alt="Background"
+                />
+                <div class="card-tutor-profile-container">
+                  <img
+                    src="./images/tutors/team_5.jpg"
+                    alt="Tutor Salomon Perez"
+                  />
+                </div>
+              </picture>
+              <div class="card-tutor-body">
+                <h4 class="fs-2 fw-medium">
+                  <strong>Salomon Perez</strong>
+                  <span class="fs-3 fw-normal text-secondary d-block">
+                    Data Structure Teacher</span
+                  >
+                </h4>
+                <button
+                  class="btn btn-sm btn-secondary border-2 border-light text-light btn-lg rounded-5 fs-5 mt-4 py-2 w-75 text-truncate mx-auto d-block"
+                >
+                  Read More
+                </button>
+              </div>
+            </article>
+          </div>
+          <div class="swiper-slide">
+            <article class="card-tutor">
+              <picture class="card-tutor-img-container">
+                <img
+                  src="./images/background/graduated_background.jpg"
+                  alt="Background"
+                />
+                <div class="card-tutor-profile-container">
+                  <img src="./images/tutors/team_6.jpg" alt="Tutor Zak Byrd" />
+                </div>
+              </picture>
+              <div class="card-tutor-body">
+                <h4 class="fs-2 fw-medium">
+                  <strong>Zak Byrd</strong>
+                  <span class="fs-3 fw-normal text-secondary d-block">
+                    Data Analysis Teacher</span
+                  >
+                </h4>
+                <button
+                  class="btn btn-sm btn-secondary border-2 border-light text-light btn-lg rounded-5 fs-5 mt-4 py-2 w-75 text-truncate mx-auto d-block"
+                >
+                  Read More
+                </button>
+              </div>
+            </article>
+          </div>
         </div>
         <div class="swiper-button-next"></div>
         <div class="swiper-button-prev"></div>
       </div>
     </section>
 
+    <!-- Testimonials section -->
     <section class="min-vh-100 py-5 container d-flex align-items-center">
       <div class="mx-auto container-testimonials position-relative">
         <picture
           class="position-absolute overflow-hidden w-100 h-100 filter-container"
         >
           <img
-            src="./images/categorys/architechture.jpg"
+            src="./images/categorys/architecture.jpg"
             alt="Services"
             class="w-100 object-fit-cover h-100"
           />
@@ -815,29 +891,33 @@
         >
           <div class="col-12 col-lg-6 z-1">
             <h2 class="fs-6 text-light px-2 text-center">VIEW TESTIMONIALS</h2>
-            <p class="fs-1 fw-bold px-2 text-light text-center">
+            <p class="fs-2 fw-bold px-2 text-light text-center">
               FOR US IT IS VERY IMPORTANT TO KNOW THE OPINION OF OUR CLIENTS
             </p>
           </div>
           <div class="col-12 col-lg-6">
-            <div class="swiper carousel-testimonials">
+            <div class="swiper carousel-testimonials" style="min-height: 50vh">
               <div class="swiper-wrapper">
                 <div class="swiper-slide">
                   <article class="card-testimonial">
-                    <picture class="card-testimonial-img-container">
+                    <picture
+                      class="card-testimonial-img-container rounded overflow-hidden"
+                    >
                       <img
-                        src="./images/background/graduated_background.jpg"
+                        src="./images/testimonials/person_1.jpg"
                         alt="Background"
                       />
                     </picture>
                     <button
                       class="card-testimonial-playButton btn btn-primary z-1"
+                      data-bs-toggle="modal"
+                      data-bs-target="#videoModal"
                     >
                       <span class="bi bi-play-fill"></span>
                     </button>
                     <div class="card-testimonial-body">
                       <h4
-                        class="fs-3 fst-italic bg-white px-4 py-2 rounded bg-secondary fw-medium"
+                        class="fs-3 fst-italic bg-white px-4 py-2 rounded bg-secondary fw-bolder"
                         style="color: rgb(199, 53, 0)"
                       >
                         <strong>John Smith</strong>
@@ -847,26 +927,304 @@
                 </div>
                 <div class="swiper-slide">
                   <article class="card-testimonial">
-                    <picture class="card-testimonial-img-container">
+                    <picture
+                      class="card-testimonial-img-container rounded overflow-hidden"
+                    >
                       <img
-                        src="./images/background/graduated_background.jpg"
+                        src="./images/testimonials/person_2.jpg"
                         alt="Background"
                       />
                     </picture>
+                    <button
+                      class="card-testimonial-playButton btn btn-primary z-1"
+                      data-bs-toggle="modal"
+                      data-bs-target="#videoModal"
+                    >
+                      <span class="bi bi-play-fill"></span>
+                    </button>
                     <div class="card-testimonial-body">
-                      <h4 class="fs-2 px-2 py-2 bg-secondary fw-medium">
-                        <strong>John Smith</strong>
+                      <h4
+                        class="fs-3 fst-italic bg-white px-4 py-2 rounded bg-secondary fw-bolder"
+                        style="color: rgb(199, 53, 0)"
+                      >
+                        <strong>Aviana Cantrell</strong>
+                      </h4>
+                    </div>
+                  </article>
+                </div>
+                <div class="swiper-slide">
+                  <article class="card-testimonial">
+                    <picture
+                      class="card-testimonial-img-container rounded overflow-hidden"
+                    >
+                      <img
+                        src="./images/testimonials/person_3.jpg"
+                        alt="Background"
+                      />
+                    </picture>
+                    <button
+                      class="card-testimonial-playButton btn btn-primary z-1"
+                      data-bs-toggle="modal"
+                      data-bs-target="#videoModal"
+                    >
+                      <span class="bi bi-play-fill"></span>
+                    </button>
+                    <div class="card-testimonial-body">
+                      <h4
+                        class="fs-3 fst-italic bg-white px-4 py-2 rounded bg-secondary fw-bolder"
+                        style="color: rgb(199, 53, 0)"
+                      >
+                        <strong>Helen Frank</strong>
+                      </h4>
+                    </div>
+                  </article>
+                </div>
+                <div class="swiper-slide">
+                  <article class="card-testimonial">
+                    <picture
+                      class="card-testimonial-img-container rounded overflow-hidden"
+                    >
+                      <img
+                        src="./images/testimonials/person_4.jpg"
+                        alt="Background"
+                      />
+                    </picture>
+                    <button
+                      class="card-testimonial-playButton btn btn-primary z-1"
+                      data-bs-toggle="modal"
+                      data-bs-target="#videoModal"
+                    >
+                      <span class="bi bi-play-fill"></span>
+                    </button>
+                    <div class="card-testimonial-body">
+                      <h4
+                        class="fs-3 fst-italic bg-white px-4 py-2 rounded bg-secondary fw-bolder"
+                        style="color: rgb(199, 53, 0)"
+                      >
+                        <strong>Aspen Austin</strong>
+                      </h4>
+                    </div>
+                  </article>
+                </div>
+                <div class="swiper-slide">
+                  <article class="card-testimonial">
+                    <picture
+                      class="card-testimonial-img-container rounded overflow-hidden"
+                    >
+                      <img
+                        src="./images/testimonials/person_5.jpg"
+                        alt="Background"
+                      />
+                    </picture>
+                    <button
+                      class="card-testimonial-playButton btn btn-primary z-1"
+                      data-bs-toggle="modal"
+                      data-bs-target="#videoModal"
+                    >
+                      <span class="bi bi-play-fill"></span>
+                    </button>
+                    <div class="card-testimonial-body">
+                      <h4
+                        class="fs-3 fst-italic bg-white px-4 py-2 rounded bg-secondary fw-bolder"
+                        style="color: rgb(199, 53, 0)"
+                      >
+                        <strong>Emerald Newmanh</strong>
                       </h4>
                     </div>
                   </article>
                 </div>
               </div>
-              <div class="swiper-pagination z-2"></div>
+              <div class="swiper-testimonial-pagination z-2"></div>
             </div>
           </div>
         </div>
       </div>
     </section>
+
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="videoModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <!-- Add .modal-dialog-centered here -->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <video id="videoPlayer" width="100%" controls>
+              <source src="./videos/review_1.mp4" type="video/mp4" />
+              Tu navegador no soporta el elemento de video.
+            </video>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer id="ContactUs" class="container-fluid bg-primary pt-5">
+      <div class="row row-cols-1 gy-4 mt-5 mx-auto">
+        <div class="col-12 col-lg-3">
+          <picture class="mx-auto d-block">
+            <img
+              src="./images/logo.png"
+              alt="Logo"
+              class="img-fluid w-100 mx-auto d-block"
+              style="max-width: 200px"
+            />
+          </picture>
+        </div>
+        <hr class="bg-secondary my-5 d-lg-none" />
+        <div class="col-12 col-md-6 col-lg-3">
+          <h5 class="fs-3 fw-bolder text-secondary text-lg-start text-center">
+            Quick Links
+          </h5>
+          <ul class="list-unstyled mt-4 mt-lg-0 text-center text-lg-start">
+            <li><a class="link-nav-light fs-5" href="#About">About Us</a></li>
+            <li>
+              <a class="link-nav-light fs-5" href="#Courses">Courses</a>
+            </li>
+            <li>
+              <a class="link-nav-light fs-5" href="#Team">Team </a>
+            </li>
+            <li>
+              <a class="link-nav-light fs-5" href="#Contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+        <hr class="bg-secondary d-md-none" />
+        <div class="col-12 col-md-6 col-lg-3">
+          <h5 class="fs-3 fw-bolder text-lg-start text-secondary text-center">
+            Contact Info
+          </h5>
+          <ul class="list-unstyled mt-4 mt-lg-0 text-center text-lg-start">
+            <li>
+              <a
+                class="link-nav-light text-decoration-none fs-5"
+                href="mailto:info@email.com"
+                target="_blank"
+                ><span class="bi bi-envelope-fill me-2"></span>
+                info@email.com
+              </a>
+            </li>
+            <li>
+              <a
+                class="link-nav-light text-decoration-none fs-5"
+                href="tel:+1-202-555-0100"
+                target="_blank"
+                ><span class="bi bi-telephone-fill me-2"></span>
+                +1-202-555-0100
+              </a>
+            </li>
+
+            <li>
+              <a
+                class="link-nav-light text-decoration-none fs-5"
+                href="https://www.google.com/maps/place/Central+Park,+New+York,+NY,+USA/"
+                target="_blank"
+              >
+                <span class="bi bi-geo-alt-fill me-2"></span>
+                Central Park, United States
+              </a>
+            </li>
+            <li>
+              <ul
+                class="d-flex mt-1 flex-row justify-content-lg-start justify-content-center gap-lg-3 gap-5"
+              >
+                <li class="list-inline-item">
+                  <a
+                    class="link-nav-light text-decoration-none fs-2"
+                    href="https://www.facebook.com/"
+                    target="_blank"
+                    ><span class="bi bi-facebook"></span
+                  ></a>
+                </li>
+                <li class="list-inline-item">
+                  <a
+                    class="link-nav-light text-decoration-none fs-2"
+                    href="https://instagram.com/"
+                    target="_blank"
+                    ><span class="bi bi-instagram"></span
+                  ></a>
+                </li>
+                <li class="list-inline-item">
+                  <a
+                    class="link-nav-light text-decoration-none fs-2"
+                    href="https://youtube.com/"
+                    target="_blank"
+                    ><span class="bi bi-youtube"></span
+                  ></a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <hr class="bg-secondary d-lg-none" />
+        <div class="col-12 mt-3 col-lg-3">
+          <h5 class="fs-3 fw-bolder text-secondary text-lg-start text-center">
+            Subscribe to our newsletter
+          </h5>
+          <p class="text-lg-start text-center fs-5 text-light pe-0 pe-lg-3">
+            Receive our newsletter with the best news of the university
+          </p>
+          <form
+            class="mt-4 d-flex justify-content-lg-start justify-content-center"
+          >
+            <div
+              class="input-group bg-white rounded-4 overflow-hidden w-75"
+              style="max-width: 300px"
+            >
+              <input
+                type="email"
+                class="form-control shadow-none border-2 border-light"
+                placeholder="Email"
+                aria-label="Email"
+                aria-describedby="button-addon2"
+              />
+              <button
+                class="btn rounded-4 px-4 btn-secondary border-2 border-light text-light"
+                type="button"
+                id="button-addon2"
+              >
+                Subscribe
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <hr class="bg-secondary d-lg-none mt-5" />
+      <hr class="bg-dark rounded d-none d-lg-block px-5 mt-5" />
+      <div class="row px-5 mt-5 mt-lg-4 mx-auto">
+        <div class="col-md-6 text-light text-center text-lg-start">
+          <p>&copy; Copyright University. All Rights Reserved.</p>
+          <p>This Website Was Designed And Developed By Josesilvera.com</p>
+        </div>
+        <div class="col-md-6 mb-3">
+          <a href="https://striveenterprise.com/" target="_blank">
+            <source
+              srcset="./images/logo_silvera_enterprises.png"
+              media="(min-width: 768px)"
+              class="img-fluid mx-auto d-block"
+            />
+            <img
+              src="./images/logo_silvera_enterprises.png"
+              alt="Logo"
+              class="img-fluid mx-auto d-block"
+              style="max-width: 200px"
+            />
+          </a>
+        </div>
+      </div>
+    </footer>
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
@@ -874,89 +1232,6 @@
       crossorigin="anonymous"
     ></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script>
-      const CLASS_BG_PRIMARY = "bg-primary";
-      const CLASS_BG_WHITE = "bg-white";
-      const CLASS_BG_TRANSPARENT = "bg-transparent";
-      const CLASS_SHADOW = "shadow";
-      const CLASS_LINK_LIGHT = "link-nav-light";
-      const CLASS_LINK_PRIMARY = "link-primary";
-      const CLASS_LINK_DARK = "link-dark";
-
-      function toggleClasses(element, addClasses, removeClasses) {
-        element.classList.add(...addClasses);
-        element.classList.remove(...removeClasses);
-      }
-
-      function toggleLinkClasses(links, addClass, removeClass) {
-        links.forEach((link) => {
-          link.classList.add(addClass);
-          link.classList.remove(removeClass);
-        });
-      }
-
-      window.addEventListener("scroll", function () {
-        const topNav = document.querySelector(".top-header");
-        const navbar = document.querySelector(".navbar");
-        const topNavLinks = document.querySelectorAll(".top-header a");
-        const navbarLinks = document.querySelectorAll(".navbar a");
-        const scrollPosition = window.scrollY;
-
-        if (scrollPosition >= window.innerHeight) {
-          toggleClasses(topNav, [CLASS_BG_WHITE], [CLASS_BG_PRIMARY]);
-          toggleClasses(
-            navbar,
-            [CLASS_BG_PRIMARY, CLASS_SHADOW],
-            [CLASS_BG_TRANSPARENT, CLASS_BG_WHITE]
-          );
-
-          toggleLinkClasses(topNavLinks, CLASS_LINK_PRIMARY, CLASS_LINK_LIGHT);
-        } else {
-          toggleClasses(topNav, [CLASS_BG_PRIMARY], [CLASS_BG_WHITE]);
-          toggleClasses(
-            navbar,
-            [CLASS_BG_TRANSPARENT, CLASS_BG_WHITE],
-            [CLASS_BG_PRIMARY, CLASS_SHADOW]
-          );
-          toggleLinkClasses(topNavLinks, CLASS_LINK_LIGHT, CLASS_LINK_PRIMARY);
-        }
-      });
-
-      const swiper = new Swiper(".carousel-tutors", {
-        spaceBetween: 30,
-        pagination: {
-          el: ".swiper-pagination",
-        },
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-        },
-        breakpoints: {
-          640: {
-            slidesPerView: 1,
-            spaceBetween: 20,
-          },
-          768: {
-            slidesPerView: 2,
-            spaceBetween: 40,
-          },
-          1024: {
-            slidesPerView: 4,
-            spaceBetween: 70,
-          },
-        },
-      });
-
-      var carouselTestimonials = new Swiper(".carousel-testimonials", {
-        slidesPerView: 1,
-        spaceBetween: 10,
-        speed: 0, // No animation
-        // Enable pagination
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
-        },
-      });
-    </script>
+    <script src="./main.js" type="module"></script>
   </body>
 </html>

@@ -1,6 +1,7 @@
 // 2. Definir tus propias variables aquí
 $primary: #014762;
 $secondary: #f2a649;
+$secondary-light: #ff9b22;
 $tertiary: #6d6d6d;
 
 // iconos
@@ -45,6 +46,25 @@ body {
   font-family: "Varela Round", sans-serif;
 }
 
+.navbar-toggler{
+  border: 0;
+  font-size: 2.5rem;
+  outline: none;
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    scale: 1.1;
+  }
+}
+
+.navbar-toggler:focus{
+  box-shadow: none;
+}
+
+.collapse.navbar-collapse{
+  transition: all 0.3s ease-in-out;
+}
+
 h2.display-4::before {
   content: "";
   display: inline-block;
@@ -67,25 +87,24 @@ h2.display-4::before {
 .link-nav-light {
   color: white;
   position: relative;
+  transition: all .1s ease-in;
+  text-decoration: none;
 
-  &::before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 4px;
-    border-radius: 4px;
-    background-color: var(--text);
-    bottom: 0;
-    padding: 20px;
-    left: 0;
-    transform-origin: right;
-    transform: scaleX(0);
-    transition: transform 0.3s ease-in-out;
+  &:hover {
+    transform: scale(1.1);
+    color: $secondary-light;
   }
+}
 
-  &:hover::before {
-    transform-origin: left;
-    transform: scaleX(1);
+.link-nav-primary {
+  color: $primary;
+  position: relative;
+  transition: all .1s ease-in;
+  text-decoration: none;
+
+  &:hover {
+    transform: scale(1.1);
+    color: $secondary-light;
   }
 }
 
@@ -163,7 +182,7 @@ h2.display-4::before {
   position: relative;
 
   @include media-breakpoint-up(lg) {
-   align-items: flex-start;
+    align-items: flex-start;
   }
 }
 
@@ -184,7 +203,7 @@ h2.display-4::before {
   @include media-breakpoint-up(lg) {
     margin-left: 40px;
     align-items: flex-start;
-   }
+  }
 }
 
 %card-grid-size {
@@ -209,10 +228,9 @@ h2.display-4::before {
   @extend %card-grid-size;
 }
 
-
 /* Card tutors and carousel */
 .carousel-tutors {
-  height: 50vh;
+  height: 80vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -220,13 +238,14 @@ h2.display-4::before {
 
 .card-tutor {
   background-color: #ffffff;
-  height: 60vh;
+  height: 80vh;
+  max-height: 500px;
   border-radius: 50%;
   overflow: hidden;
   width: 18rem;
   display: flex;
   flex-direction: column;
-  border-radius: 1rem;  
+  border-radius: 1rem;
   transition: all 0.3s ease-in-out;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
 }
@@ -259,7 +278,8 @@ h2.display-4::before {
   gap: 0;
   display: flex;
   flex-direction: column;
-  padding: 1rem;
+  justify-content: space-between;
+  padding-bottom: 20px;
 }
 
 /* Cards testimonials */
@@ -271,10 +291,10 @@ h2.display-4::before {
   color: #ffffff;
   font-size: 3rem;
   z-index: 1;
-  background-color: rgb(199, 53, 0, 0.5);
+  background-color: rgb(199, 53, 0, 0.8);
   border: none;
   border-radius: 50%;
-  padding: 0 10px 0 15px;
+  padding: 4px 10px 0 15px;
   width: 60px;
   height: 60px;
   text-align: center;
@@ -282,7 +302,7 @@ h2.display-4::before {
   align-items: center;
   justify-content: center;
   transition: background-color 0.3s ease;
-  
+
   &:hover {
     background-color: rgba(234, 65, 3, 0.8);
   }
@@ -291,7 +311,7 @@ h2.display-4::before {
 .container-testimonials {
   max-width: 100%;
   padding: 0px;
-  
+
   @include media-breakpoint-up(lg) {
     max-width: 70vw;
     min-height: 70vh;
@@ -337,7 +357,9 @@ h2.display-4::before {
 
 .carousel-testimonials {
   height: 50vh;
+  position: relative;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
@@ -348,6 +370,31 @@ h2.display-4::before {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.swiper-testimonial-pagination {
+  display: flex;
+  gap: 0px;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-pagination-bullet {
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  font-size: 12px;
+  color: $secondary;
+  opacity: 1;
+  background: rgba($secondary, 0.7);
+  transition: background 0.3s, transform 0.3s;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.swiper-pagination-bullet-active {
+  transform: scale(1.05);
+  background: $secondary;
 }
 
 .swiper-slide img {
